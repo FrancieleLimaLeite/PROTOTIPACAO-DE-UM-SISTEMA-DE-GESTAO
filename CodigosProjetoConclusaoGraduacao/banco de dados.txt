@@ -1,0 +1,86 @@
+---------------mysql do TG-------------
+
+tabela das oficinas
+
+CREATE TABLE IF NOT EXISTS `oficinas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `oficina` varchar(255) NOT NULL,
+  `professor` varchar(255) NOT NULL,
+  `turno` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+
+------------------------------------------
+
+tabela do acesso ao sistema
+
+CREATE TABLE IF NOT EXISTS `acesso_ao_sistema` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `painel` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+
+----------------------------------------------------
+
+tabela de professor
+
+CREATE TABLE IF NOT EXISTS `professor` (
+  `id_prof` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `nasc` varchar(255) NOT NULL,
+  `endereco` varchar(255) NOT NULL,
+  `bairro` varchar(255) NOT NULL,
+  `cep` varchar(255) NOT NULL,
+  `rg` varchar(255) NOT NULL,
+  `cpf` varchar(255) NOT NULL,
+  `telefone` varchar(255) NOT NULL,
+  `turno` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `obs` varchar(555) NOT NULL,
+  PRIMARY KEY (`id_prof`)
+)
+
+
+------------------------------------------------------
+
+tabela aluno
+
+CREATE TABLE IF NOT EXISTS `aluno` (
+  `id_aluno` int(11) NOT NULL AUTO_INCREMENT,
+  `data_inscricao` varchar(255) NOT NULL,
+  `resp_inscricao` varchar(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `nasc` varchar(255) NOT NULL,
+  `endereco` varchar(255) NOT NULL,
+  `bairro` varchar(255) NOT NULL,
+  `cep` varchar(255) NOT NULL,
+  `rg` varchar(255) NOT NULL,
+  `telefone` varchar(255) NOT NULL,
+  `grau_esc` varchar(255) NOT NULL,
+  `escola` varchar(255) NOT NULL,
+  `mae` varchar(255) NOT NULL,
+  `pai` varchar(255) NOT NULL,
+  `ofic_est` varchar(255) NOT NULL,
+  `turno` varchar(255) NOT NULL,
+  `ponto_onibus` varchar(255) NOT NULL,
+  `obs` varchar(555) NOT NULL,
+  PRIMARY KEY (`id_aluno`)
+)
+
+----------------------------------------------------
+
+tabela voluntario
+
+
+CREATE TABLE IF NOT EXISTS `voluntario` (
+  `id_vol` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telefone` varchar(255) NOT NULL,
+  `benfeitoria` varchar(255) NOT NULL,
+  `obs` varchar(555) NOT NULL,
+  PRIMARY KEY (`id_vol`)
+)
